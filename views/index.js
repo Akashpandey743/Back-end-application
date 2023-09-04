@@ -1,0 +1,13 @@
+import express from 'express';
+
+const app = express();
+const port = 3000;
+
+app.get('/',(req,res)=>{
+    res.render('./index.ejs',{dayType:'it is week day',
+    advice:'it is time to work hard'})
+});
+
+app.listen(port,()=>{
+    console.log(`Server is running on port ${port}.`)
+})
